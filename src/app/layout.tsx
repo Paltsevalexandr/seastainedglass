@@ -15,12 +15,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
-    </html>
-  );
+    return (
+      <html lang="en">
+        <body className={inter.className}>
+			<Header />
+			<main>
+				{children}
+			</main>
+        </body>
+      </html>
+    );
 }

@@ -1,0 +1,63 @@
+@import "./global/mixins.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: "Open Sans", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+header,
+section {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.section-content {
+    padding: 0 1rem;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+}
+.page-title {
+    margin: 0 0 1.3rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    @include tablet {
+        font-size: 2.5rem;
+    }
+}
+.page-subhead {
+    margin: 0 0 1.3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+}
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.col-one-second {
+    width: 50%;
+}
+
+
+a {
+    color: rgb(139, 195, 74);
+}

@@ -1,0 +1,55 @@
+@import "../global/mixins.scss";
+
+.paragraph {
+    margin: 0 0 1.5rem;
+}
+.hero {
+    &__columns {
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+    &__column {
+        width: 100%;
+
+        @include tablet {
+            padding: 2rem;
+            width: 50%;
+            
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    &__text-link {
+        margin: 0 4px;
+
+        &:first-child:not(:last-child) {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+}
+
+.social {
+    &__list {
+        margin-bottom: 1rem;
+        display: flex;
+    }
+    &__item {
+        margin-right: 0.5rem;
+        list-style-type: none;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
